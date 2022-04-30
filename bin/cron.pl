@@ -26,7 +26,7 @@ for my $x ( glob "$cookie/*" )
     next unless $name =~ /^[a-z0-9]{32}$/;
     my $time = `cat '$x'`;
     chomp $time;
-    next unless $time && $time =~ /^\d+$/ && $time + 60 < time;
+    next unless $time && $time =~ /^\d+$/ && $time + 300 < time;
     my $file = "$locked/$name";
     next if -f $file;
     system "touch $file";
