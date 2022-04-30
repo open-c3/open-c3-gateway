@@ -1,0 +1,6 @@
+*.swp
+.DS_Store
+*.old
+data/cookie/
+data/locked/
+logs/lua/
