@@ -27,8 +27,8 @@
 ### 修改cookie的key名称
 ```
 conf/js/openc3gateway.js : 把session字符串改成sid
-conf/lua/md5.lua:  把session字符串改成sid
-conf/nginx.conf: 把session字符串改成sid
+conf/lua/md5.lua         : 把session字符串改成sid
+conf/nginx.conf          : 把session字符串改成sid
 
 ```
 
@@ -48,7 +48,10 @@ conf/nginx.conf: nginx 文件的proxy_pass 字段
 ```
 cron.pl 中的300,当前默认是300秒不操作就超时
 ```
-
+### 修改缓存时间
+```
+cron.pl 中的86400,当前默认只缓存一天内的数据进行处理，超过一天的自动清理。
+```
 ### 修改读取的日志行数
 ```
 bin/cron.pl 当前读取的是最后的5000行
@@ -56,7 +59,7 @@ bin/cron.pl 当前读取的是最后的5000行
 
 ### 修改服务端口
 ```
-bin/start.sh  当前是7788
+bin/start.sh    当前是7788
 conf/nginx.conf 当前是7788
 ```
 
